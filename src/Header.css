@@ -5,9 +5,18 @@
     text-align: left;
     padding-left: 10px ;
     margin-bottom: 80px;
+    padding-bottom: 2px;
+  
+  
 }
 
 #header {
     font-weight: lighter;
     color: rgb(254, 252, 252);
+  
+}
+
+h2 {
+    font-size: 35px;
+    margin: 0;
 }

@@ -7,7 +7,7 @@ export default function Header(){
         <>
        
         <div id="header-container">
-            <h1 id="header">RecallNest</h1>
+            <h2 id="header">RecallNest</h2>
         </div>    
         </>
     )
