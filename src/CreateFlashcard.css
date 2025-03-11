@@ -1,0 +1,39 @@
+
+h1 {
+    color: rgb(131, 131, 131);
+    font-weight: lighter;
+}
+
+
+#create-flash {
+    color: rgb(131, 131, 131);
+    display: block;
+    font-weight: lighter;
+   
+}
+
+#text-area {
+    display: block;
+}
+
+#save {
+    background-color: rgb(231, 231, 231);
+}
+
+#add-contain {
+    margin: auto;
+    border: solid 1px rgb(197, 197, 197);
+    max-width: max-content;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+#main-contain {
+    background-color: white;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: auto;
+    padding: 25px;
+    border: rgb(202, 202, 202) 1px solid;
+    max-width: max-content;
+    border-radius: 6px;
+}
