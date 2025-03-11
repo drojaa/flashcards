@@ -9,7 +9,7 @@ import CreateFlashcard from "./CreateFlashcard";
 export default function Home() {
     return (
       <>
-        <CreateFlashcard/>
+        <h1>Home Page </h1>
       </>
     );
   }

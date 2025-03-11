@@ -19,6 +19,7 @@ export default function CreateFlashcard() {
     </div>
 
     <button id="save">save</button>
+    <button id="save">close</button>
     </div>
     </div>
     </>

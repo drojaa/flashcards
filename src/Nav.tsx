@@ -5,8 +5,8 @@ export default function Nav(){
     return(
         <>
         <ul>
-          <li><a href="default.asp">Home</a></li>
-          <li><a href="default.asp">Create Flashcard</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/Create">Create Flashcard</a></li>
         </ul>
         </>
 

@@ -1,17 +1,31 @@
-import './App.css'
+import { createBrowserRouter, Route, Routes, RouterProvider } from 'react-router-dom';
+import Header from './Header';
+import Nav from './Nav';
 import Home from './Home'
-import Header from "./Header";
+import CreateFlashcard from './CreateFlashcard';
 
-function App() {
-
+const Root = () => {
   return (
     <>
-    <div>
-      <Header/>
-      <Home/>
-    </div>
+       <Nav />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/Create" element={<CreateFlashcard/>} />
+      </Routes>
+    
     </>
   )
 }
 
-export default App
+const router = createBrowserRouter(
+  [{path:"*", Component: Root}]
+)
+
+export default function App() {
+  return (
+
+    <RouterProvider router={router}/>
+  )
+}
+
