@@ -7,7 +7,7 @@ export default function Header(){
         <>
         <Nav/>
         <div id="header-container">
-            <h1 id="header">Flashcard Generator</h1>
+            <h1 id="header">RecallNest</h1>
         </div>    
         </>
     )
