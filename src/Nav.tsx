@@ -6,7 +6,7 @@ export default function Nav(){
         <>
         <ul>
           <li><a href="default.asp">Home</a></li>
-          <li><a href="default.asp">Add Flashcard</a></li>
+          <li><a href="default.asp">Create Flashcard</a></li>
         </ul>
         </>
 
