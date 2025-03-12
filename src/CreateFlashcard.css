@@ -38,3 +38,11 @@ h1 {
     border-radius: 6px;
 }
 
+textarea {
+    color: rgb(167, 165, 165);
+}
+
+#close {
+    text-align: right;
+    font-weight: 300;
+}
