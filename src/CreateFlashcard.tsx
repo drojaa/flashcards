@@ -2,33 +2,26 @@
 
 import "./CreateFlashcard.css";
 import { useState } from "react";
-
-
+import { useDispatch } from "react-redux";
+import { addFlashcard } from "../redux/flashcardsSlice";
 
 
 export default function CreateFlashcard() {
-
     const [question, setQuestion] = useState('');
     const [response, setResponse] = useState('');
+    const dispatch = useDispatch();
 
-    // Creates a New Flashcard Object 
-    const newFlashcard = {
-        question: question,
-        response: response,
-    }
-
-
-    function handleSubmit(e) {
+    function handleSubmit(e: React.FormEvent) {
         e.preventDefault(); // Prevent browser from reloading
-    
-        const form = e.target;
-        const formData = new FormData(form);
-    
-        const formJson = Object.fromEntries(formData.entries());
 
+        console.log(question)
+        console.log(response)
+        dispatch(addFlashcard({ question, response })); 
+        //sends action to Redux store to modify state 
+        
 
-        setQuestion(formJson.question.toString());
-        setResponse(formJson.response.toString());   
+        setQuestion("")
+        setResponse("")
     }
 
   return (
@@ -42,12 +35,21 @@ export default function CreateFlashcard() {
 
       <div id="question-contain">
       <label id="create-flash">Question:</label>
-      <textarea id="textarea" name="question" rows={4} cols={40} placeholder="Write on the front of the card here"/>
+     
+      {/* by default value is binded to ''
+          until the user makes changes
+          in the textarea input  */}
+      <textarea id="textarea" name="question" rows={4} cols={40} value={question} onChange={(e) => setQuestion(e.target.value)} placeholder="Write on the front of the card here"/>
       </div>
+
 
       <div id="response-contain">
       <label id="create-flash">Response:</label>
-      <textarea id="textarea" name="response" rows={4} cols={40} placeholder="Write on the back of the card here" />
+
+        {/* by default value is binded to ''
+          until the user makes changes
+          in the textarea input  */}
+      <textarea id="textarea" name="response" rows={4} cols={40} value={response} onChange={(e) => setResponse(e.target.value)} placeholder="Write on the back of the card here" />
       </div>
 
       <button type="submit" id="save">save</button>
