@@ -25,13 +25,24 @@ const flashcardSlice = createSlice({
     name: "flashcards",
     initialState,
     reducers: {
-        addFlashcard: (state, action: PayloadAction<Flashcard>) => {
-            state.flashcards.push(action.payload)
-        }
-    }
-})
+      // Action to add a flashcard
+      addFlashcard: (state, action: PayloadAction<Flashcard>) => {
+        state.flashcards.push(action.payload);
+      },
+      // Action to remove a flashcard
+      removeFlashcard: (state, action: PayloadAction<Flashcard>) => {
+        state.flashcards = state.flashcards.filter(
+          (flashcard) =>
+            flashcard.question !== action.payload.question &&
+            flashcard.response !== action.payload.response
+        );
+      },
+    },
+  });
+  
+
 
 console.log("reached in store")
 
-export const { addFlashcard } = flashcardSlice.actions;
+export const { addFlashcard, removeFlashcard } = flashcardSlice.actions;
 export default flashcardSlice.reducer;

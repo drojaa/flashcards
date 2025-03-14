@@ -14,8 +14,6 @@ export default function CreateFlashcard() {
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault(); // Prevent browser from reloading
 
-        console.log(question)
-        console.log(response)
         dispatch(addFlashcard({ question, response })); 
         //sends action to Redux store to modify state 
         
