@@ -3,6 +3,7 @@
 import { useSelector, useDispatch} from "react-redux";
 import { RootState } from "../redux/store";
 import { removeFlashcard } from "../redux/flashcardsSlice";
+import { useState } from "react";
 import "./Home.css"
 
 
@@ -11,11 +12,18 @@ export default function Home() {
   // accessing the global state flashcards 
   const dispatch = useDispatch();
 
+  const [showAnswer, setShowAnswer] = useState("")
+
   function handleClick(flashcard: { question: string; response: string}) {
     // Dispatch the removeFlashcard action with the selected flashcard
     console.log(flashcard.question)
     console.log(flashcard.response)
     dispatch(removeFlashcard(flashcard))
+  }
+
+  function handleShowHide(flashcard: { question: string; response: string}){
+    console.log("Reached")
+    setShowAnswer(flashcard.response)
   }
     return (
       <>
@@ -25,7 +33,10 @@ export default function Home() {
                 <li id="home-li" key={index}>
                     <button onClick={() => handleClick(flashcard)} id="close-home">X</button>
                     <p id="home-p">Q: {flashcard.question}</p>
-                    <p id="home-p">A: {flashcard.response}</p> 
+                    <button onClick={() => handleShowHide(flashcard)}id="show">Show/Hide</button>
+                    {showAnswer === String(flashcard.response) &&
+                    <p id="home-res">{flashcard.response}</p>}
+                    <p id="home-res>"></p>
                 </li>
             ))}
         </ul>
