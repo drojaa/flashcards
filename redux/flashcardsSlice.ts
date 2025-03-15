@@ -20,8 +20,32 @@ interface FlashcardState {
 const initialState: FlashcardState = {
   flashcards: [ {
       id: "1",
-      question: "Who wrote 'To Kill a Mockingbird'?",
-      response: "Harper Lee",
+      question: "Who wrote 'All About Love'?",
+      response: "Bell Hooks",
+      visible: false
+    },
+    {
+      id: "2",
+      question: "What art movement is Pablo Picasso known for?",
+      response: "Cubism",
+      visible: false
+    },
+    {
+      id: "3",
+      question: "What is the time complexity of binary search?",
+      response: "O(log n)",
+      visible: false
+    },
+    {
+      id: "4",
+      question: "What does 'HTML' stand for?",
+      response: "HyperText Markup Language",
+      visible: false
+    },
+    {
+      id: "5",
+      question: "What is the purpose of a hash function in computer science?",
+      response: "To map data of arbitrary size to fixed-size values",
       visible: false
     }], 
 }
