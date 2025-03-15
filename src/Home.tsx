@@ -25,7 +25,7 @@ export default function Home() {
   
   return (
     <>
-      <h1 id="home-h1">Home Page</h1>
+      <h1 id="home-h1">All Flashcards</h1>
       <ul id="home-ul">
         {flashcards.map((flashcard, index) => (
           <li id="home-li" key={index}>
