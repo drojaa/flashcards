@@ -26,8 +26,8 @@ const initialState: FlashcardState = {
     },
     {
       id: "2",
-      question: "What is the time complexity of binary search?",
-      response: "O(log n)",
+      question: "Who painted the Mona Lisa?",
+      response: "Leonardo da Vinci",
       visible: false
     },
     {
