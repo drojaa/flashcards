@@ -13,11 +13,13 @@
     flex: 1 1 calc(25% - 20px); /* Makes sure 3 cards fit per row */
     max-width: calc(25% - 20px);
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     padding: 15px;
     text-align: center;
     background: #f9f9f9;
     border-radius: 5px;
+    width: 25%;
+    height: 25%;
   }
 
   #home-h1 {
@@ -65,4 +67,8 @@ background-color: rgb(224, 199, 203);
 
 #show:hover {
   background-color: rgb(224, 199, 203);
+  }
+
+  #ans {
+    font-weight: 400;
   }
